@@ -18,7 +18,7 @@ public class Course {
 	
 	private String courseName;
 	
-	@OneToOne(cascade = CascadeType.ALL,fetch=FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="priceId",referencedColumnName="priceId")
 	private Price price;
 	
