@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.learn2grow.exception.CourseNotFoundException;
 import com.learn2grow.model.Course;
 import com.learn2grow.model.Price;
 import com.learn2grow.service.CourseService;
@@ -39,4 +38,5 @@ public class CourseController {
 	{ 
 		return courseService.getPriceForCourse(courseId,location);
 	}
+	
 }

@@ -1,8 +1,6 @@
 package com.learn2grow.exception;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +25,7 @@ public class GlobalException {
 		return new ResponseEntity<Object>(cEx, HttpStatus.NOT_FOUND);
 	}
 
-        @ExceptionHandler(value=Exception.class)
+    @ExceptionHandler(value=Exception.class)
 	public ResponseEntity<Object> uncoughtException(Exception e)
 	{
 		CustomException cEx = new CustomException(500, "Something went wrong. Contact Admin! ", null,LocalDateTime.now());
