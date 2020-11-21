@@ -35,7 +35,7 @@ public class CourseController {
 	}
 	
 	@GetMapping("/courses/{courseId}/price")
-	public Price getPriceForCourse(@PathVariable int courseId,@RequestParam(value="location",defaultValue="IND",required=true) String location)
+	public Price getPriceForCourse(@PathVariable int courseId,@RequestParam(value="location",defaultValue="IND") String location)
 	{ 
 		return courseService.getPriceForCourse(courseId,location);
 	}

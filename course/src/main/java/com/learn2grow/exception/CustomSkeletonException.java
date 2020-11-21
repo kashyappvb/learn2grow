@@ -1,20 +1,18 @@
 package com.learn2grow.exception;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
-public class CustomException {
+public class CustomSkeletonException extends RuntimeException {
+
 	private int code;
 	private String msg;
-	private LocalDateTime date;
 	private List<String> details;
 	
-	public CustomException(int code, String msg, List<String> details,LocalDateTime date) {
-		//super();
+	public CustomSkeletonException(int code, String msg, List<String> details) {
+		super();
 		this.code = code;
 		this.msg = msg;
 		this.details = details;
-		this.date = date;
 	}
 	
 	public int getCode() {
@@ -35,14 +33,4 @@ public class CustomException {
 	public void setDetails(List<String> details) {
 		this.details = details;
 	}
-
-	public LocalDateTime getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDateTime date) {
-		this.date = date;
-	}
-	
-	
 }

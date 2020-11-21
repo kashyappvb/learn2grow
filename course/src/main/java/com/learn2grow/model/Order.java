@@ -10,7 +10,7 @@ import javax.persistence.Table;
 @Table(name="ORDER_TABLE")
 public class Order {
 	
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Id
 	private int orderId;
 	

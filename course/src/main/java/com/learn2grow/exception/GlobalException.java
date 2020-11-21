@@ -1,5 +1,6 @@
 package com.learn2grow.exception;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +16,14 @@ public class GlobalException {
 	@ExceptionHandler(value=CourseNotFoundException.class)
 	public ResponseEntity<Object> courseNotFoundException(CourseNotFoundException e)
 	{
-		List<String> list = new ArrayList<String>();
-		CustomException cEx = new CustomException(e.getCode(), e.getMsg(), e.getDetails());
+		CustomException cEx = new CustomException(e.getCode(), e.getMsg(), e.getDetails(),LocalDateTime.now());
+		return new ResponseEntity<Object>(cEx, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(value=LocationNeededException.class)
+	public ResponseEntity<Object> locationNeededFoundException(LocationNeededException e)
+	{
+		CustomException cEx = new CustomException(e.getCode(), e.getMsg(), e.getDetails(),LocalDateTime.now());
 		return new ResponseEntity<Object>(cEx, HttpStatus.NOT_FOUND);
 	}
 }

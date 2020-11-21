@@ -1,6 +1,7 @@
 package com.learn2grow.service;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -56,6 +57,11 @@ public class CourseService {
 			
 			return price;
 		}
-		throw new CourseNotFoundException(404, "COURSE_NOT_FOUND", null);
+		else
+		{
+			List<String> list = new ArrayList<String>(); 
+			list.add("Further Details can be passed here");
+			throw new CourseNotFoundException(404, "COURSE_NOT_FOUND", list);
+		}
 	}
 }
