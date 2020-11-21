@@ -26,4 +26,11 @@ public class GlobalException {
 		CustomException cEx = new CustomException(e.getCode(), e.getMsg(), e.getDetails(),LocalDateTime.now());
 		return new ResponseEntity<Object>(cEx, HttpStatus.NOT_FOUND);
 	}
+
+        @ExceptionHandler(value=Exception.class)
+	public ResponseEntity<Object> uncoughtException(Exception e)
+	{
+		CustomException cEx = new CustomException(500, "Something went wrong. Contact Admin! ", null,LocalDateTime.now());
+		return new ResponseEntity<Object>(cEx, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
 }
