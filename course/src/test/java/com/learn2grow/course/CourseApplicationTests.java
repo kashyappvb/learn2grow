@@ -1,4 +1,4 @@
-package com.sayone.course;
+package com.learn2grow.course;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
