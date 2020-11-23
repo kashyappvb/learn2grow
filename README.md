@@ -1,1 +1,1 @@
-Relere README.txt
+Refer README.txt
