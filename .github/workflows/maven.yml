@@ -24,7 +24,7 @@ jobs:
     - name: step list
       run: ls
     - name: Build with Maven
-      run: mvn -B package --file learn2grow/pom.xml
+      run: mvn -B package --file course/pom.xml
     - name: Upload learn2grow Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
