@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -21,6 +21,8 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
+    - name: step list
+      run: ls
     - name: Build with Maven
       run: mvn -B package --file learn2grow/pom.xml
     - name: Upload learn2grow Artifact
