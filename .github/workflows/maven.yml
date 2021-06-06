@@ -22,7 +22,7 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn -B package --file learn2grow/pom.xml
     - name: Upload learn2grow Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
